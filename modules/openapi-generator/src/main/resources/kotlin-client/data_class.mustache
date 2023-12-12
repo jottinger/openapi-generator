@@ -117,7 +117,7 @@ import {{packageName}}.infrastructure.ITransformForStorage
         @JsonProperty(value = {{#lambda.doublequote}}{{{value}}}{{/lambda.doublequote}}) {{&name}}({{{value}}}){{^-last}},{{/-last}}{{#-last}};{{/-last}}
         {{/jackson}}
         {{#kotlinx_serialization}}
-        @SerialName(value = {{#lambda.doublequote}}{{{value}}}{{/lambda.doublequote}}) {{&name}}({{{value}}}){{^-last}},{{/-last}}{{#-last}};{{/-last}}
+        @SerialName(value = {{{value}}}) {{&name}}({{{value}}}){{^-last}},{{/-last}}{{#-last}};{{/-last}}
         {{/kotlinx_serialization}}
         {{/multiplatform}}
         {{#multiplatform}}
